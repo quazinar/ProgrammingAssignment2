@@ -28,7 +28,9 @@
         ## it should only be called by cacheSolve().)
 
 makeCacheMatrix <- function(x = matrix()) {
-    inv <- NULL # set the inverse to null
+    inv <- NULL # set the inverse to null. This is done to initialize
+                # the variable in the environment so it can be set and
+                # retrieved by the functions below.
     
     ## Define the get/set functions for the input matrix x
     set <- function(y){
