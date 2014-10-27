@@ -24,8 +24,9 @@
     ## a list containing:
         ## get/set functions for the input x
         ## getInverse/setInverse functions for the input x
-        ## (note that setInverse should not be called by the user;
-        ## it should only be called by cacheSolve().)
+        ## (note that these should not be called by the user;
+        ## they should only be called by cacheSolve(). Consider these
+		## to be private functions, in other words.)
 
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL # set the inverse to null. This is done to initialize
@@ -41,7 +42,7 @@ makeCacheMatrix <- function(x = matrix()) {
         x
     }
     
-    ## Define the getInverse/setInverse functions for x (setInverse should
+    ## Define the getInverse/setInverse functions for x (these should
     ## only be called by the cacheSolve() function, not the user)
     setInverse <- function(inverse){
         inv <<- inverse
